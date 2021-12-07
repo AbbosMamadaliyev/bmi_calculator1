@@ -36,16 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: buildAppBar(context),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4),
-        child: Column(
-          children: [
-            MaleOrFemale(),
-            SizedBox(height: 50),
-            WeightAndHeight(
-                weightController: weightController,
-                heightController: heightController),
-            SizedBox(height: 80),
-            buildCalculateButton(context),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MaleOrFemale(),
+              SizedBox(height: 50),
+              WeightAndHeight(
+                  weightController: weightController,
+                  heightController: heightController),
+              SizedBox(height: 80),
+              buildCalculateButton(context),
+            ],
+          ),
         ),
       ),
     );
